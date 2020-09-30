@@ -1,4 +1,4 @@
-# climb-tutorial-ansible
+# climb-workshop-ansible
 Based on https://github.com/PoreCamp/porecamp.github.io/tree/master/ansible-recipes
 
 
