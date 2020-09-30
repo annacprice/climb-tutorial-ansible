@@ -26,7 +26,7 @@ test with `ssh localhost` then `exit`
 Install git and clone this repo
 ```
 sudo apt-get install git
-git clone https://github.com/annacprice/climb-tutorial-ansible.git
+git clone https://github.com/annacprice/climb-workshop-ansible.git
 ```
 
 Run `generate_user_passwords.py` to generate `users.yml`
