@@ -6,9 +6,6 @@
   gather_facts: false
 
   tasks:
-  - name: install python2
-    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
-
   - name: get hostname
     command: /bin/hostname
     register: vhostname
@@ -32,7 +29,7 @@
       mode: 0644
 
   - name: install HWE kernel
-    apt: name=linux-generic-hwe-16.04 state=latest
+    apt: name=linux-generic-hwe-20.04 state=latest
 
   - name: install numad
     apt: name={{ item }} state=latest
@@ -59,7 +56,7 @@
     with_items:
       - "{{ user_results.results }}"
 
-- name: update apt cache
+  - name: update apt cache
     apt: update_cache=yes
 
   - name: install packages
