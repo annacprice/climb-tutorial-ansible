@@ -2,13 +2,9 @@
 Based on https://github.com/PoreCamp/porecamp.github.io/tree/master/ansible-recipes
 
 
-Install ansible
+Install ansible 2.6
 ```
-sudo apt-get update
-sudo apt-get install software-properties-common
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install ansible
+sudo pip install 'ansible==2.6' 
 ```
 
 Generate ssh key
