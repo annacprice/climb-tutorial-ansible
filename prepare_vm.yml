@@ -1,3 +1,4 @@
+### tested with ansible 2.10.2 and ubuntu 20.04 image
 ---
 
 - hosts: all
@@ -40,9 +41,14 @@
   - name: start numad service
     service: name=numad state=started enabled=yes
 
-  - name: load users and  passwords
+  - name: load users and passwords
     include_vars: users.yml
     tags: users
+    
+  # check dictionary is loading correctly
+  #- name: show dictionary
+  #  debug:
+  #    var: user_passwords  
 
   - name: create users
     user: name="{{ item.key }}" password="{{ item.value }}" shell="/bin/bash" update_password=on_create
@@ -81,4 +87,3 @@
     - libdigest-md5-perl
     - libfreetype6-dev
     - pkg-config
-   
